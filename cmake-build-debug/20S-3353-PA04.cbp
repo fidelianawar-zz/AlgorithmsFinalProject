@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/BacktrackingSolution.h">
+			<Option target="FinalProject"/>
+		</Unit>
+		<Unit filename="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.h">
+			<Option target="FinalProject"/>
+		</Unit>
 		<Unit filename="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/main.cpp">
 			<Option target="FinalProject"/>
 		</Unit>

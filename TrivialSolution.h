@@ -19,6 +19,38 @@ private:
     int N = 0;
 
 public:
+    bool isValid(int row, int column, vector<int>& queens) {
+        for(int i=0; i<row; i++){
+            if(queens[i] == column){
+                return false;
+            }
+            if(queens[i]-column == i-row){
+                return false;
+            }
+            if(queens[i]-column == row-i){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    void helper(int row, vector<int>&q, vector<vector<string>>& result) {
+        if(row == N){
+            vector<string> tempVec(N, string(N, '0'));
+            for(int i=0; i<N; i++) {
+                tempVec[i][q[i]] = '1';
+            }
+            result.push_back(tempVec);
+        } else {
+            for(int i=0; i<N; i++) {
+                if(isValid(row, i, q)){
+                    q[row] = i;
+                    helper(row+1, q, result);
+                }
+            }
+        }
+    }
+
     vector<vector<string>> solveNQueens(int n) {
         N = n;
         vector<vector<string>> ret;
@@ -26,47 +58,19 @@ public:
         helper(0, q, ret);
         for(int i = 0; i < ret.size(); i++){
             for(int j = 0; j < ret[i].size(); j++) {
-                if(j == 0){
-                    cout << "['";
+                if((j/N)==0){
+                    cout << endl;
                 }
-                else if((j/4)==0 && (j != ret[i].size()-1)){
-                    cout << "','";
+                for(char c : ret[i][j]){
+                    std::cout << " " << c <<" ";
                 }
-                else if(j == ret[i].size()-1){
-                    cout << "'],";
-                }
-                std::cout << ret[i][j];
             }
+            cout << endl;
         }
         return ret;
     }
 
-    bool isValid(int row, int col, vector<int>& q) {
-        for(int i=0; i<row; i++){
-            if(q[i] == col) return false;
-            if(q[i]-col == row-i)   return false;
-            if(q[i]-col == i-row)   return false;
-        }
-        return true;
-    }
 
-    void helper(int row, vector<int>&q, vector<vector<string>>& ret) {
-        if(row == N){
-            vector<string> tem(N, string(N, '.'));
-            for(int i=0; i<N; i++) {
-                tem[i][q[i]] = 'Q';
-            }
-            ret.push_back(tem);
-
-        } else {
-            for(int i=0; i<N; i++) {
-                if(isValid(row, i, q)){
-                    q[row] = i;
-                    helper(row+1, q, ret);
-                }
-            }
-        }
-    }
 };
 
 #endif //ALGORITHMSFINALPROJECT_TRIVIALSOLUTIONS_H
