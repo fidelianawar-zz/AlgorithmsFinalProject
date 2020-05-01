@@ -5,7 +5,6 @@
 #ifndef INC_20S_3353_PA04_BACKTRACKINGSOLUTION_H
 #define INC_20S_3353_PA04_BACKTRACKINGSOLUTION_H
 
-#define N 12
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -13,21 +12,24 @@
 
 using std::vector;
 
-class BacktrackingSolution {
+class BacktrackingSolution{
+private:
+    int N = 0;
 public:
-
-//print output of board
+//print board
     void printSolution(vector<vector<int>>& board) {
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++)
+            for (int j = 0; j < N; j++){
                 printf(" %d ", board[i][j]);
+            }
             cout << endl;
         }
     }
+
     bool isSafe(vector<vector<int>>& board, int row, int col) {
         int i, j;
         for (i = 0; i < col; i++){
-            if (board[row][i]){
+            if (board[row][i] == 1){
                 return false;
             }
         }
@@ -40,14 +42,15 @@ public:
         return true;
     }
 
-    bool solveNQUtil(vector<vector<int>>& board, int col) {
+    bool helper(vector<vector<int>>& board, int col) {
         if (col >= N)
             return true;
         for (int i = 0; i < N; i++) {
             if (isSafe(board, i, col)) {
                 board[i][col] = 1;
-                if (solveNQUtil(board, col + 1))
+                if (helper(board, col + 1)){
                     return true;
+                }
                 board[i][col] = 0; // BACKTRACK
             }
         }
@@ -55,8 +58,9 @@ public:
     }
 
     bool solveNQ(int n) {
+        N = n;
         vector<vector<int> > vec(N, vector<int>(N, 0));
-        if (solveNQUtil(vec, 0) == false) {
+        if (helper(vec, 0) == false) {
             printf("Solution does not exist");
             return false;
         }

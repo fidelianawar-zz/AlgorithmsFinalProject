@@ -69,8 +69,5 @@ public:
         }
         return ret;
     }
-
-
 };
-
 #endif //ALGORITHMSFINALPROJECT_TRIVIALSOLUTIONS_H
