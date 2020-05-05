@@ -4,6 +4,7 @@
 
 #include "BacktrackingSolution.h"
 #include <iostream>
+#include <fstream>
 
 using std::cout;
 
@@ -18,13 +19,13 @@ BacktrackingSolution::BacktrackingSolution(int numQueens) : numQueens(numQueens)
 }
 
 //solve the problem
-void BacktrackingSolution::solve() {
+void BacktrackingSolution::solve(std::ofstream& outputFile){
 
     //solve starting with first column
     if (placeQueens(0)) {
-        printBoard();
+        printBoard(outputFile);
     } else {
-        cout << "There is no solution \n";
+        outputFile << "There is no solution \n";
     }
 }
 
@@ -43,7 +44,7 @@ bool BacktrackingSolution::placeQueens(int colIndex) {
             if (placeQueens(colIndex + 1)) { //check if queen can be placed in next column and set to true if so
                 return true;
             }
-            //BACKTRACK -failed to put queen in column, so we must reinitialize the location back to 0 (no queen)
+            //BACKTRACk -failed to put queen in column, so we must reinitialize the location back to 0 (no queen)
             //iterate considering the next row
             chessBoard[rowIndex][colIndex] = 0;
         }
@@ -54,7 +55,7 @@ bool BacktrackingSolution::placeQueens(int colIndex) {
 }
 
 //check if a queen can be placed in a spot or not
-bool BacktrackingSolution::isValid(int rowIndex, int colIndex) const {
+bool BacktrackingSolution::isValid(int rowIndex, int colIndex) {
 
     //checks to make sure queens are not in the same row
     for (int i = 0; i < colIndex; i++) {
@@ -82,15 +83,15 @@ bool BacktrackingSolution::isValid(int rowIndex, int colIndex) const {
 }
 
 //prints out contents of board displaying the queens
-void BacktrackingSolution::printBoard() const {
+void BacktrackingSolution::printBoard(std::ofstream& outputFile) {
     for (int i = 0; i < chessBoard.size(); i++) {
         for (int j = 0; j < chessBoard.size(); j++) {
             if (chessBoard[i][j] == 1) {
-                cout << " 1 "; //queen
+                outputFile << " 1 "; //queen
             } else {
-                cout << " 0 "; //empty space
+                outputFile << " 0 "; //empty space
             }
         }
-        cout << std::endl;
+        outputFile << std::endl;
     }
-}
+};

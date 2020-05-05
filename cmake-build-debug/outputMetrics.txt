@@ -1,0 +1,2 @@
+Trivial Time: 3097 us
+Sophisticated Time: 93 us

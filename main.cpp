@@ -5,26 +5,35 @@
 #include "TrivialSolution.h"
 #include "BacktrackingSolution.h"
 #include <iostream>
+#include <fstream>
 #include <chrono>
 
 int main(){
 
-    TrivialSolution solution{8};
+    std::ofstream outputFile, outputFileClear;
+    std::ofstream outputMetrics, dataOutputClear;
+
+    outputFileClear.open("output.txt", std::ios::out | std::ios::trunc); // clear contents
+    dataOutputClear.open("outputMetrics.txt", std::ios::out | std::ios::trunc); // clear contents
+
+    outputFile.open("output.txt", std::ios_base::app); //make the file appendable
+    outputMetrics.open("outputMetrics.txt", std::ios_base::app);
+
+    TrivialSolution trivial{8};
     BacktrackingSolution backtrack{8};
 
-    cout << "Trivial Solution: ";
+    outputFile << "Trivial Solution: ";
     auto trivialStart = std::chrono::steady_clock::now();
-    solution.solveNQueens();
+    trivial.solveNQueens(outputFile);
     auto trivialEnd = std::chrono::steady_clock::now();
 
-    cout << endl << endl << "Sophisticated Solution: " << endl;
+    outputFile << endl << endl << "Sophisticated Solution: " << endl;
     auto sophisticatedStart = std::chrono::steady_clock::now();
-    backtrack.solve();
+    backtrack.solve(outputFile);
     auto sophisticatedEnd = std::chrono::steady_clock::now();
 
-    cout << endl;
-    cout << "Trivial Time: " << std::chrono::duration_cast<std::chrono::microseconds>(trivialEnd - trivialStart).count() << " us" << endl;
-    cout << "Sophisticated Time: " << std::chrono::duration_cast<std::chrono::microseconds>(sophisticatedEnd - sophisticatedStart).count() << " us";
+    outputMetrics << "Trivial Time: " << std::chrono::duration_cast<std::chrono::microseconds>(trivialEnd - trivialStart).count() << " us" << endl;
+    outputMetrics << "Sophisticated Time: " << std::chrono::duration_cast<std::chrono::microseconds>(sophisticatedEnd - sophisticatedStart).count() << " us";
 
     return 0;
 }

@@ -4,6 +4,7 @@
 
 #include "TrivialSolution.h"
 #include <iostream>
+#include <fstream>
 
 using std::cout;
 
@@ -32,7 +33,7 @@ bool TrivialSolution::isValid(int row, int column, vector<int> &queens) {
     return true;
 }
 
-void TrivialSolution::helper(int row, vector<int> &q, vector<vector<string> > &result) {
+void TrivialSolution::helper(int row, vector<int> &q, vector<vector<string>> &result) {
     if(row == numQueens){
         vector<string> tempVec(numQueens, string(numQueens, '0'));
         for(int i=0; i<numQueens; i++) {
@@ -49,19 +50,21 @@ void TrivialSolution::helper(int row, vector<int> &q, vector<vector<string> > &r
     }
 }
 
-vector<vector<string>> TrivialSolution::solveNQueens() {
+vector<vector<string>> TrivialSolution::solveNQueens(std::ofstream& outputFile) {
+    vector<vector<string>> chessBoard;
     vector<int> q(numQueens, 0);
     helper(0, q, chessBoard);
+
     for(int i = 0; i < chessBoard.size(); i++){
         for(int j = 0; j < chessBoard[i].size(); j++) {
             if((j/numQueens)==0){
-                cout << endl;
+                outputFile << endl;
             }
             for(char c : chessBoard[i][j]){
-                std::cout << " " << c <<" ";
+                outputFile << " " << c <<" ";
             }
         }
-        cout << endl;
+        outputFile << endl;
     }
     return chessBoard;
 }

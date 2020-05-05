@@ -15,14 +15,15 @@ using std::cout;
 using std::endl;
 
 class TrivialSolution {
+
 private:
-    vector<vector<string>> chessBoard;
-    int numQueens = 0;
+    vector<vector<int>> chessBoard;
+    int numQueens;
 
 public:
     TrivialSolution(int numQueens);
     bool isValid(int row, int column, vector<int>& queens);
     void helper(int row, vector<int>&q, vector<vector<string>>& result);
-    vector<vector<string>> solveNQueens();
+    vector<vector<string>> solveNQueens(std::ofstream&);
 };
 #endif //ALGORITHMSFINALPROJECT_TRIVIALSOLUTIONS_H

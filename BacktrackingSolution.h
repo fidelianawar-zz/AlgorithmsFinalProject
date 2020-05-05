@@ -17,14 +17,13 @@ class BacktrackingSolution{
     vector<vector<int>> chessBoard;
     int numQueens = 0;
 
-public:
-    BacktrackingSolution(int numQueens);
-    void solve();
-
 private:
     bool placeQueens(int colIndex);
-    bool isValid(int rowIndex, int colIndex) const;
-    void printBoard() const;
+    bool isValid(int rowIndex, int colIndex);
+    void printBoard(std::ofstream&);
 
+public:
+    BacktrackingSolution(int numQueens);
+    void solve(std::ofstream&);
 };
 #endif //INC_20S_3353_PA04_BACKTRACKINGSOLUTION_H

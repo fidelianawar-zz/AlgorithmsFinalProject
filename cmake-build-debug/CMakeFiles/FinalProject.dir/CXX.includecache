@@ -14,12 +14,6 @@ stdio.h
 vector
 -
 
-/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.cpp
-TrivialSolution.h
-/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.h
-iostream
--
-
 /Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.h
 vector
 -
@@ -34,6 +28,8 @@ TrivialSolution.h
 BacktrackingSolution.h
 /Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/BacktrackingSolution.h
 iostream
+-
+fstream
 -
 chrono
 -
