@@ -10,8 +10,10 @@
 
 int main(){
 
-    std::ofstream outputFile, outputFileClear;
-    std::ofstream outputMetrics, dataOutputClear;
+    std::ofstream outputFile;
+    std::ofstream outputMetrics;
+    std::ofstream outputFileClear;
+    std::ofstream dataOutputClear;
 
     outputFileClear.open("output.txt", std::ios::out | std::ios::trunc); // clear contents
     dataOutputClear.open("outputMetrics.txt", std::ios::out | std::ios::trunc); // clear contents
