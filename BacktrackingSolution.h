@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <vector>
+#include <fstream>
 
 using std::vector;
 
