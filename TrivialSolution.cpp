@@ -7,6 +7,16 @@
 
 using std::cout;
 
+//initializes the 2D vector of row/column size = numQueens
+TrivialSolution::TrivialSolution(int numQueens) : numQueens(numQueens) {
+    chessBoard.resize(numQueens);
+
+    //setting the size of the board based upon integer passed into constructor
+    for (auto &chessRow : chessBoard) {
+        chessRow.resize(numQueens);
+    }
+}
+
 bool TrivialSolution::isValid(int row, int column, vector<int> &queens) {
     for(int i=0; i<row; i++){
         if(queens[i] == column){
@@ -23,14 +33,14 @@ bool TrivialSolution::isValid(int row, int column, vector<int> &queens) {
 }
 
 void TrivialSolution::helper(int row, vector<int> &q, vector<vector<string> > &result) {
-    if(row == N){
-        vector<string> tempVec(N, string(N, '0'));
-        for(int i=0; i<N; i++) {
+    if(row == numQueens){
+        vector<string> tempVec(numQueens, string(numQueens, '0'));
+        for(int i=0; i<numQueens; i++) {
             tempVec[i][q[i]] = '1';
         }
         result.push_back(tempVec);
     } else {
-        for(int i=0; i<N; i++) {
+        for(int i=0; i<numQueens; i++) {
             if(isValid(row, i, q)){
                 q[row] = i;
                 helper(row+1, q, result);
@@ -39,21 +49,19 @@ void TrivialSolution::helper(int row, vector<int> &q, vector<vector<string> > &r
     }
 }
 
-vector<vector<string>> TrivialSolution::solveNQueens(int n) {
-    N = n;
-    vector<vector<string>> ret;
-    vector<int> q(N, 0);
-    helper(0, q, ret);
-    for(int i = 0; i < ret.size(); i++){
-        for(int j = 0; j < ret[i].size(); j++) {
-            if((j/N)==0){
+vector<vector<string>> TrivialSolution::solveNQueens() {
+    vector<int> q(numQueens, 0);
+    helper(0, q, chessBoard);
+    for(int i = 0; i < chessBoard.size(); i++){
+        for(int j = 0; j < chessBoard[i].size(); j++) {
+            if((j/numQueens)==0){
                 cout << endl;
             }
-            for(char c : ret[i][j]){
+            for(char c : chessBoard[i][j]){
                 std::cout << " " << c <<" ";
             }
         }
         cout << endl;
     }
-    return ret;
+    return chessBoard;
 }

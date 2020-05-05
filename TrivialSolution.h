@@ -16,11 +16,13 @@ using std::endl;
 
 class TrivialSolution {
 private:
-    int N = 0;
+    vector<vector<string>> chessBoard;
+    int numQueens = 0;
 
 public:
+    TrivialSolution(int numQueens);
     bool isValid(int row, int column, vector<int>& queens);
     void helper(int row, vector<int>&q, vector<vector<string>>& result);
-    vector<vector<string>> solveNQueens(int n);
+    vector<vector<string>> solveNQueens();
 };
 #endif //ALGORITHMSFINALPROJECT_TRIVIALSOLUTIONS_H
