@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o"
+  "CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o"
   "CMakeFiles/FinalProject.dir/main.cpp.o"
   "FinalProject"
   "FinalProject.pdb"

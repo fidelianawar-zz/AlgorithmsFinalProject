@@ -123,6 +123,60 @@ FinalProject/fast:
 	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/build
 .PHONY : FinalProject/fast
 
+BacktrackingSolution.o: BacktrackingSolution.cpp.o
+
+.PHONY : BacktrackingSolution.o
+
+# target to build an object file
+BacktrackingSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o
+.PHONY : BacktrackingSolution.cpp.o
+
+BacktrackingSolution.i: BacktrackingSolution.cpp.i
+
+.PHONY : BacktrackingSolution.i
+
+# target to preprocess a source file
+BacktrackingSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.i
+.PHONY : BacktrackingSolution.cpp.i
+
+BacktrackingSolution.s: BacktrackingSolution.cpp.s
+
+.PHONY : BacktrackingSolution.s
+
+# target to generate assembly for a file
+BacktrackingSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.s
+.PHONY : BacktrackingSolution.cpp.s
+
+TrivialSolution.o: TrivialSolution.cpp.o
+
+.PHONY : TrivialSolution.o
+
+# target to build an object file
+TrivialSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o
+.PHONY : TrivialSolution.cpp.o
+
+TrivialSolution.i: TrivialSolution.cpp.i
+
+.PHONY : TrivialSolution.i
+
+# target to preprocess a source file
+TrivialSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/TrivialSolution.cpp.i
+.PHONY : TrivialSolution.cpp.i
+
+TrivialSolution.s: TrivialSolution.cpp.s
+
+.PHONY : TrivialSolution.s
+
+# target to generate assembly for a file
+TrivialSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/TrivialSolution.cpp.s
+.PHONY : TrivialSolution.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FinalProject"
+	@echo "... BacktrackingSolution.o"
+	@echo "... BacktrackingSolution.i"
+	@echo "... BacktrackingSolution.s"
+	@echo "... TrivialSolution.o"
+	@echo "... TrivialSolution.i"
+	@echo "... TrivialSolution.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

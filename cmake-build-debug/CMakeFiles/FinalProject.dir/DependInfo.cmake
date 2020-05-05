@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/BacktrackingSolution.cpp" "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o"
+  "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.cpp" "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o"
   "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/main.cpp" "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles/FinalProject.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

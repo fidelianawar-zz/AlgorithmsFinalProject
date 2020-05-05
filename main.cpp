@@ -10,16 +10,16 @@
 int main(){
 
     TrivialSolution solution;
-    BacktrackingSolution backtrack;
+    BacktrackingSolution backtrack{8};
 
     cout << "Trivial Solution: ";
     auto trivialStart = std::chrono::steady_clock::now();
-    solution.solveNQueens(14);
+    solution.solveNQueens(8);
     auto trivialEnd = std::chrono::steady_clock::now();
 
     cout << endl << endl << "Sophisticated Solution: " << endl;
     auto sophisticatedStart = std::chrono::steady_clock::now();
-    backtrack.solveNQ(14);
+    backtrack.solve();
     auto sophisticatedEnd = std::chrono::steady_clock::now();
 
     cout << endl;

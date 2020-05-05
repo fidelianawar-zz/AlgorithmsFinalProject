@@ -70,17 +70,47 @@ CMakeFiles/FinalProject.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/main.cpp" -o CMakeFiles/FinalProject.dir/main.cpp.s
 
+CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o: ../BacktrackingSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o -c "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/BacktrackingSolution.cpp"
+
+CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/BacktrackingSolution.cpp" > CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.i
+
+CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/BacktrackingSolution.cpp" -o CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.s
+
+CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o: ../TrivialSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o -c "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.cpp"
+
+CMakeFiles/FinalProject.dir/TrivialSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/TrivialSolution.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.cpp" > CMakeFiles/FinalProject.dir/TrivialSolution.cpp.i
+
+CMakeFiles/FinalProject.dir/TrivialSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/TrivialSolution.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/TrivialSolution.cpp" -o CMakeFiles/FinalProject.dir/TrivialSolution.cpp.s
+
 # Object files for target FinalProject
 FinalProject_OBJECTS = \
-"CMakeFiles/FinalProject.dir/main.cpp.o"
+"CMakeFiles/FinalProject.dir/main.cpp.o" \
+"CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o" \
+"CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o"
 
 # External object files for target FinalProject
 FinalProject_EXTERNAL_OBJECTS =
 
 FinalProject: CMakeFiles/FinalProject.dir/main.cpp.o
+FinalProject: CMakeFiles/FinalProject.dir/BacktrackingSolution.cpp.o
+FinalProject: CMakeFiles/FinalProject.dir/TrivialSolution.cpp.o
 FinalProject: CMakeFiles/FinalProject.dir/build.make
 FinalProject: CMakeFiles/FinalProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FinalProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/fidelianawar/Desktop/Spring 2020/CS3353 - Algorithms/Projects/AlgorithmsFinalProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable FinalProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FinalProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
