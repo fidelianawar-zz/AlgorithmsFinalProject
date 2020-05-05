@@ -40,7 +40,7 @@ public:
             if (board[i][j])
                 return false;
         return true;
-    }
+    } 
 
     bool helper(vector<vector<int>>& board, int col) {
         if (col >= N)

@@ -14,12 +14,12 @@ int main(){
 
     cout << "Trivial Solution: ";
     auto trivialStart = std::chrono::steady_clock::now();
-    solution.solveNQueens(12);
+    solution.solveNQueens(14);
     auto trivialEnd = std::chrono::steady_clock::now();
 
     cout << endl << endl << "Sophisticated Solution: " << endl;
     auto sophisticatedStart = std::chrono::steady_clock::now();
-    backtrack.solveNQ(12);
+    backtrack.solveNQ(14);
     auto sophisticatedEnd = std::chrono::steady_clock::now();
 
     cout << endl;
