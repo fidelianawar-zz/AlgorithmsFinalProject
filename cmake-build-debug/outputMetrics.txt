@@ -1,2 +1,24 @@
-Trivial Time: 5235 us
-Sophisticated Time: 134 us
+Runtime for 5x5 board: 
+Trivial: 215 us
+Sophisticated: 15 us
+
+Runtime for 6x6 board: 
+Trivial: 97 us
+Sophisticated: 19 us
+
+Runtime for 7x7 board: 
+Trivial: 1092 us
+Sophisticated: 33 us
+
+Runtime for 8x8 board: 
+Trivial: 3891 us
+Sophisticated: 125 us
+
+Runtime for 9x9 board: 
+Trivial: 20851 us
+Sophisticated: 53 us
+
+Runtime for 10x10 board: 
+Trivial: 43470 us
+Sophisticated: 82 us
+

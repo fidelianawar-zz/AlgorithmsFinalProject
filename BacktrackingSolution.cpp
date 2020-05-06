@@ -19,7 +19,7 @@ BacktrackingSolution::BacktrackingSolution(int numQueens) : numQueens(numQueens)
 }
 
 //solve the problem
-void BacktrackingSolution::solve(std::ofstream& outputFile){
+void BacktrackingSolution::solveNQueens(std::ofstream& outputFile){
 
     //solve starting with first column
     if (placeQueens(0)) {
@@ -44,7 +44,7 @@ bool BacktrackingSolution::placeQueens(int colIndex) {
             if (placeQueens(colIndex + 1)) { //check if queen can be placed in next column and set to true if so
                 return true;
             }
-            //BACKTRACk -failed to put queen in column, so we must reinitialize the location back to 0 (no queen)
+            //BACKTRACK -failed to put queen in column, so we must reinitialize the location back to 0 (no queen)
             //iterate considering the next row
             chessBoard[rowIndex][colIndex] = 0;
         }
