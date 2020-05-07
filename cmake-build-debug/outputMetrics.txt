@@ -1,8 +1,8 @@
 Runtime for 5x5 board: 
-Trivial: 290 us
-Sophisticated: 15 us
+Trivial: 306 us
+Sophisticated: 26 us
 
 Runtime for 6x6 board: 
-Trivial: 104 us
-Sophisticated: 20 us
+Trivial: 144 us
+Sophisticated: 28 us
 

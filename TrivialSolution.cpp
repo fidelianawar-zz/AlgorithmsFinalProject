@@ -66,6 +66,7 @@ vector<vector<string>> TrivialSolution::solveNQueens(std::ofstream& outputFile) 
             }
         }
         outputFile << endl;
+
     }
     return chessBoard;
 }
