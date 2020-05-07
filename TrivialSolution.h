@@ -23,7 +23,7 @@ private:
 public:
     TrivialSolution(int numQueens);
     bool isValid(int row, int column, vector<int>& queens);
-    void helper(int row, vector<int>&q, vector<vector<string>>& result);
+    void placeQueens(int row, vector<int>&q, vector<vector<string>>& result);
     vector<vector<string>> solveNQueens(std::ofstream&);
 };
 #endif //ALGORITHMSFINALPROJECT_TRIVIALSOLUTIONS_H

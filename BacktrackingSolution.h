@@ -25,6 +25,6 @@ private:
 
 public:
     BacktrackingSolution(int numQueens);
-    void solve(std::ofstream&);
+    void solveNQueens(std::ofstream&);
 };
 #endif //INC_20S_3353_PA04_BACKTRACKINGSOLUTION_H
