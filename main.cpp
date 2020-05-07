@@ -22,8 +22,7 @@ int main(){
 
     outputFile.open("output.txt", std::ios_base::app); //make the file appendable
     outputMetrics.open("outputMetrics.txt", std::ios_base::app);
-
-
+    
     //i keep this ranging from 5-14 for time's sake. increasing x<15 takes 30 seconds, x<16 takes 30 minutes, etc.
     //couldn't push if x > 12 because of large output file
     for(int x = 5; x < 12; x++){
